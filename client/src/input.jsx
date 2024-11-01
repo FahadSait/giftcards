@@ -102,19 +102,6 @@ const NumberInput = () => {
     return result;
   }
 
-  const navigate = useNavigate();
-
-  const onPayment = () => {
-    var isLogged = localStorage.getItem('6JdtQv2u7oUw7EWziYeyoewJ');
-
-    if (isLogged) {
-      createRazorpayOrder(inputValue);
-    }
-    else {
-      localStorage.setItem('redirectAfterLogin', createRazorpayOrder(inputValue));
-      navigate('/login');
-    }
-  }
 
 
 
@@ -133,7 +120,7 @@ const NumberInput = () => {
         <button onClick={() => handleButtonClick(500)} className="button">₹ 500</button>
         <button onClick={() => handleButtonClick(1000)} className="button">₹ 1000</button>
       </div>
-      <button onClick={onPayment} className="proceed-button">Proceed</button>
+      <button onClick={handleRazorpayScreen(inputValue)} className="proceed-button">Proceed</button>
       {responseId && <p className="response-id"> Code - {generateRandomString(12)}</p>}
     </div>
   );
