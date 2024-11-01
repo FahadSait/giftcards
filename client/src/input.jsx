@@ -33,7 +33,7 @@ const NumberInput = () => {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "http://localhost:3001/orders",
+      url: "https://giftcards-gamma.vercel.app//orders",
       headers: {
         'Content-Type': 'application/json'
       },
