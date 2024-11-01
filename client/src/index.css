@@ -1,0 +1,213 @@
+/* Overall page styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8; /* Soft background color */
+}
+
+/* Grid layout for the card container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjusting card size */
+  gap: 30px; /* More space between cards */
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Styling for each card */
+.card {
+  position: relative;
+  background-color: #fff; /* White background for the card */
+  border-radius: 20px; /* Larger border radius for rounded corners */
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  height: 200px;
+}
+
+/* Hover effect for the card */
+.card:hover {
+  transform: translateY(-8px); /* Slight lift */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow on hover */
+}
+
+/* Image styling */
+.card-img {
+  width: 50%;
+  border-radius: 30%;
+  height: 200px; /* Adjusted height for the image */
+  object-fit: contain; /* Adjust image sizing to fit better */
+  padding: 10px;
+  margin-left: 80px;
+}
+
+/* Subheading inside each card */
+.card-subheading {
+  font-size: 1.2rem; /* Slightly larger font size */
+  color: #252424;
+  margin: 10px 0;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  padding: 0 15px;
+}
+
+/* Card image hover effect */
+.card-img:hover {
+  filter: brightness(1.05);
+  transition: filter 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusting for smaller screens */
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+}
+
+/* Overall container styling */
+.container {
+  text-align: center;
+  margin-top: 50px;
+  background-color: #f4f6f9;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: auto;
+  font-family: cursive;
+}
+
+/* Input styling */
+.input {
+  width: 250px;
+  height: 40px;
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.input:focus {
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+/* Button container to align buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Styling for the buttons */
+.button {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2980b9;
+  transform: translateY(-5px);
+}
+
+/* Proceed button */
+.proceed-button {
+  background-color: #2ecc71;
+  color: white;
+  padding: 15px 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+}
+
+.proceed-button:hover {
+  background-color: #27ae60;
+  transform: translateY(-5px);
+}
+
+/* Styling for response ID */
+.response-id {
+  margin-top: 20px;
+  color: #555;
+  font-size: 16px;
+}
+
+.nav{
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.logo{
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+  color: #3498db;
+  font-family: cursive;
+  text-decoration: none;
+}
+
+.nav ul{
+  margin-right: 100px;
+  text-decoration: none;
+  font-size: xx-large;
+  margin-top: 10px;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  color: #3498db;
+  font-family: cursive;
+}
+
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f8ff;
+  transition: all 5s ease-in-out;
+}
+
+.welcome-heading {
+  font-size: 4rem;
+  color: #2c3e50;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(-20px); 
+}
