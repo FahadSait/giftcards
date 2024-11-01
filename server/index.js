@@ -7,7 +7,7 @@ const Razorpay =require("razorpay")
 const app=express()
 app.use(express.json())
 app.use(cors(
-    origin:["https://],
+    origin:["https://giftcards.vercel.app"],
     method:["POST","GET"],
     credentials:true
 ))
