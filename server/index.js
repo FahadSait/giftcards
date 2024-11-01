@@ -6,7 +6,11 @@ const Razorpay =require("razorpay")
 
 const app=express()
 app.use(express.json())
-app.use(cors())
+app.use(cors(
+    origin:["https://],
+    method:["POST","GET"],
+    credentials:true
+))
 
 mongoose.connect("mongodb://localhost:27017/employee");
 
