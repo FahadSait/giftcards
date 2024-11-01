@@ -120,7 +120,7 @@ const NumberInput = () => {
         <button onClick={() => handleButtonClick(500)} className="button">₹ 500</button>
         <button onClick={() => handleButtonClick(1000)} className="button">₹ 1000</button>
       </div>
-      <button onClick={handleRazorpayScreen(inputValue)} className="proceed-button">Proceed</button>
+      <button onClick={createRazorpayOrder(inputValue)} className="proceed-button">Proceed</button>
       {responseId && <p className="response-id"> Code - {generateRandomString(12)}</p>}
     </div>
   );
